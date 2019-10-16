@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset = "utf-8">
+      <title>Tokidex - Tokimon Database</title>
+      <link rel = "icon" type = "image/x-icon" href = "images/icon.ico">
+      <link href="/stylesheet/tokimon.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <img src="images/Tokidex.png" width = "400px" height = "200px" alt = "Tokidex - The Tokemon Database" class = "centerAlign">
+
+      <div id = "box">
+          <p> </p>
+          <div class = "options">
+              <a href="/">Home</a>
+              <a href="/addTokimon">Add Tokimon</a>
+              <a href="/deleteTokimon">Delete Tokimon</a>
+              <a class = "Home">View Tokidex</a>
+              <a href="/typeChart">Type Chart</a>
+              <a href="/battle">Battle Simulator</a>
+              <form class = "search" action = "/searchResult" method="POST">
+              <input type="text" placeholder = "Search Tokimon..." style="height: 60%; width: 200px;" id = "search" name = "searchName" onkeyup="submit">
+            </form>
+          </div>
+          <table style = "margin-right: 20px;">
+            <tr>
+              <th>Tokimon Name</th>
+              <th>Height (cm)</th>
+              <th>Weight (kg)</th>
+              <th>Fly</th>
+              <th>Fight</th>
+              <th>Fire</th>
+              <th>Water</th>
+              <th>Electric</th>
+              <th>Ice</th>
+              <th>Total</th>
+              <th>Trainer</th>
+            </tr>
+
+              <% tokiVin.forEach((r) => { %>
+                <tr>
+                <td>
+                  <form style = "margin: -8px; margin-left: -5px;" action = "/searchResult" method = "post">
+                    <input type="hidden" name="searchName" value="<%= r.name %>" />
+                    <a href = "#" onclick = "this.parentNode.submit()">
+                      <%= r.name %> </a>
+                    </form></td>
+                <td> <%= r.height %> </td>
+                <td> <%= r.weight %> </td>
+                <td> <%= r.fly %> </td>
+                <td> <%= r.fight %> </td>
+                <td> <%= r.fire %> </td>
+                <td> <%= r.water %> </td>
+                <td> <%= r.electric %> </td>
+                <td> <%= r.ice %> </td>
+                <td> <%= r.total %> </td>
+                <td> <%= r.trainername %> </td>
+              <% }); %>
+
+        </table>
+        </div>
+  </body>
+
+
+
+</html>

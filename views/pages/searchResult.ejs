@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset = "utf-8">
+      <% tokiDel.forEach((r) => { %>
+      <title>Tokidex - <%= r.name %></title>
+      <link rel = "icon" type = "image/x-icon" href = "images/icon.ico">
+      <link href="/stylesheet/tokimon.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <img src="images/Tokidex.png" width = "400px" height = "200px" alt = "Tokidex - The Tokemon Database" class = "centerAlign">
+      <div id = "box">
+          <p> </p>
+          <div class = "options">
+          <a href="/">Home</a>
+          <a href="/addTokimon">Add Tokimon</a>
+          <a href="/deleteTokimon">Delete Tokimon</a>
+          <a href="/Tokidex">View Tokidex</a>
+          <a href="/typeChart">Type Chart</a>
+          <a href="/battle">Battle Simulator</a>
+          <form class = "search" action = "Tokidex/:id" method="POST">
+          <input type="text" placeholder = "Search Tokimon..." style="height: 60%; width: 200px;" id = "search" onkeyup="submit">
+        </form>
+        </div>
+          <h1 style = "margin-left: 30px; text-align: center; margin-bottom: 30px;" ><%= r.name %></h1>
+          <p class = "about">
+          <a id = "name" style = "margin-right: 93px;" class = "searchResult">Tokimon Name:</a> <%= r.name %> <br><br>
+          <a style = "margin-right: 120px;" class = "searchResult">Height (cm): </a><%= r.height %> <br><br>
+          <a style = "margin-right: 123px;" class = "searchResult">Weight (kg): </a><%= r.weight %> <br><br>
+          <a style = "margin-right: 190px;" class = "searchResult">Fly:  </a> <%= r.fly %>  <br><br>
+          <a style = "margin-right: 182px;" class = "searchResult">Fight:</a><%= r.fight %> <br><br>
+          <a style = "margin-right: 190px;" class = "searchResult">Fire: </a><%= r.fire %> <br><br>
+          <a style = "margin-right: 174px;" class = "searchResult">Water:</a>  <%= r.water %> <br><br>
+          <a style = "margin-right: 163px;" class = "searchResult">Electric:</a> <%= r.electric %> <br><br>
+          <a style = "margin-right: 202px;" class = "searchResult">Ice:</a>  <%= r.ice %> <br><br>
+          <a style = "margin-right: 185px;" class = "searchResult">Total:</a> <%= r.total %> <br><br>
+          <a style = "margin-right: 105px;" class = "searchResult">Trainer's Name: </a><%= r.trainername %> <br><br>
+          </p>
+          <form action = "editTokimon" method = "post">
+          <input type="hidden" name="name" id="name" value = "<%= r.name %>" />
+          <button style = "margin-top: 500px; margin-left: 470px; margin-bottom: 0px;" type = "submit" class = "button1">EDIT TOKIMON</button>
+          </form>
+          <% }); %>
+      </div>
+  </body>
+</html>

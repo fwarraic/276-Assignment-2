@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset = "utf-8">
+      <title>Tokidex - Home</title>
+      <link rel = "icon" type = "image/x-icon" href = "images/icon.ico">
+      <link href="/stylesheet/tokimon.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <script> var winner = ""; </script>
+    <img src="images/Tokidex.png" width = "400px" height = "200px" alt = "Tokidex - The Tokemon Database" class = "centerAlign">
+
+      <div id = "box">
+          <p> </p>
+          <div class = "options">
+          <a href="/">Home</a>
+          <a href="/addTokimon">Add Tokimon</a>
+          <a href="/deleteTokimon">Delete Tokimon</a>
+          <a href="/Tokidex">View Tokidex</a>
+          <a href="/typeChart">Type Chart</a>
+          <a class="Home">Battle Simulator</a>
+          <form class = "search" action = "/searchResult" method="POST">
+          <input type="text" placeholder = "Search Tokimon..." style="height: 60%; width: 200px;" id = "search" name = "searchName" onkeyup="submit">
+        </form>
+        </div>
+
+        <form action = "battle" method = "POST">
+            Tokimon 1:<input type = "text" name = "toki1" required> <br>
+            vs <br><br> Tokimon 2: <input type = "text" name = "toki2" required>
+            <button type = "submit" style = "margin-left: 0px;" class = "button1">BATTLE</button>
+        </form>
+        
+      </div>
+    </body>
+
+</html>

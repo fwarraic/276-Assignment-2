@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset = "utf-8">
+      <title>Tokidex - Type Effectiveness Chart</title>
+      <link rel = "icon" type = "image/x-icon" href = "images/icon.ico">
+      <link href="/stylesheet/tokimon.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <style> td{ color: #ffdd57 } th{ color: #ffff;  border: 1px solid #000; } </style>
+    <img src="images/Tokidex.png" width = "400px" height = "200px" alt = "Tokidex - The Tokemon Database" class = "centerAlign">
+
+      <div id = "box">
+          <p> </p>
+          <div class = "options">
+              <a href="/">Home</a>
+              <a href="/addTokimon">Add Tokimon</a>
+              <a href="/deleteTokimon">Delete Tokimon</a>
+              <a href="/Tokidex">View Tokidex</a>
+              <a class = "Home">Type Chart</a>
+              <a href="/battle">Battle Simulator</a>
+              <form class = "search" action = "/searchResult" method="POST">
+              <input type="text" placeholder = "Search Tokimon..." style="height: 60%; width: 200px;" id = "search" name = "searchName" onkeyup="submit">
+            </form>
+          </div>
+          <h1 style = "margin-bottom: 30px;">Type Effectiveness Chart</h1>
+          <h2 style = "color: black;"> Chart Key: </h2>
+          <p>
+              <div class = "square" style = "margin-left:30px;">
+              <a style = "display: inline-block; width: 100px; margin-left: 30px"> Super Effective </a>
+              </div>
+              <br>
+              <div class = "square" style = "margin-left:30px; background-color: #a40000;">
+              <a style = "display: inline-block; width: 200px; margin-left: 30px"> Not Very Effective </a>
+              </div>
+
+         </p>
+          <table style = "margin-right: 20px; width: 1000px;">
+            <tr>
+              <th> </th>
+              <th style = "background-color:#488AC7">Fly</th>
+              <th style = "background-color:#C45AEC">Fight</th>
+              <th style = "background-color:#F87217">Fire</th>
+              <th style = "background-color:#43C6DB">Water</th>
+              <th style = "background-color:#FDD017">Electric</th>
+              <th style = "background-color:#55BDCA">Ice</th>
+            </tr>
+
+            <tr>
+              <th style = "background-color:#488AC7">Fly</th>
+              <td> </td>
+              <td bgcolor="#4e9a06">2x</td>
+              <td> </td>
+              <td> </td>
+              <td bgcolor="#a40000">0.5x</td>
+              <td> </td>
+            </tr>
+
+            <tr>
+              <th style = "background-color:#C45AEC">Fight</th>
+              <td bgcolor="#a40000">0.5x</td>
+              <td></td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td bgcolor="#4e9a06">2x</td>
+            </tr>
+
+            <tr>
+              <th style = "background-color:#F87217">Fire</th>
+              <td></td>
+              <td></td>
+              <td bgcolor="#a40000">0.5x</td>
+              <td bgcolor="#a40000">0.5x</td>
+              <td></td>
+              <td bgcolor="#4e9a06">2x</td>
+            </tr>
+
+            <tr>
+              <th style = "background-color:#43C6DB">Water</th>
+              <td></td>
+              <td></td>
+              <td bgcolor="#4e9a06">2x</td>
+              <td bgcolor="#a40000">0.5x</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <th style = "background-color:#FDD017">Electric</th>
+              <td bgcolor="#4e9a06">2x</td>
+              <td></td>
+              <td> </td>
+              <td bgcolor="#4e9a06">2x</td>
+              <td bgcolor="#a40000">0.5x</td>
+              <td> </td>
+            </tr>
+
+            <tr>
+              <th style = "background-color:#55BDCA">Ice</th>
+              <td bgcolor="#4e9a06">2x</td>
+              <td></td>
+              <td bgcolor="#a40000">0.5x</td>
+              <td bgcolor="#a40000">0.5x</td>
+              <td></td>
+              <td bgcolor="#a40000">0.5x</td>
+            </tr>
+        </table>
+        </div>
+  </body>
+
+</html>

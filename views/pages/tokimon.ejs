@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset = "utf-8">
+      <title>Tokidex - Home</title>
+      <link rel = "icon" type = "image/x-icon" href = "images/icon.ico">
+      <link href="/stylesheet/tokimon.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <img src="images/Tokidex.png" width = "400px" height = "200px" alt = "Tokidex - The Tokemon Database" class = "centerAlign">
+
+      <div id = "box">
+          <p> </p>
+          <div class = "options">
+          <a class = "Home">Home</a>
+          <a href="/addTokimon">Add Tokimon</a>
+          <a href="/deleteTokimon">Delete Tokimon</a>
+          <a href="/Tokidex">View Tokidex</a>
+          <a href="/typeChart">Type Chart</a>
+          <a href="/battle">Battle Simulator</a>
+          <form class = "search" action = "/searchResult" method="POST">
+          <input type="text" placeholder = "Search Tokimon..." style="height: 60%; width: 200px;" id = "search" name = "searchName" onkeyup="submit">
+        </form>
+        </div>
+
+          <h2>About Tokimon</h2>
+          <p class = "about">
+                    A Tokimon is a rare creature found in the remote areas of Korea. For the most part, they
+                    resemble rabbits and the only form of communication they have with us is the ability to say
+                    their own name. Tokimons come in all shapes and sizes, have special abilities, and tend to fight
+                    with each other on occasion. Each Tokimon could have the ability to fly, fight, throw fire, spray
+                    water, electrify, and freeze other Tokimons. Because they are such primitive creatures but have such extraordinary abilities, they
+                    need Tokimon trainers. The trainer’s job is to collect Tokimons and use them accordingly.
+          </p>
+
+          <h2>Types of Tokimon</h2>
+          <img src="images/fly.png" width = "80px" height = "80px" style = "margin-left: 30px" alt = "Fly">
+          <img src="images/fight.png" width = "85px" height = "85px" style = "margin-left: 30px" alt = "Fight">
+          <img src="images/fire.png" width = "80px" height = "80px" style = "margin-left: 30px" alt = "Fire">
+          <img src="images/water.png" width = "80px" height = "80px" style = "margin-left: 30px" alt = "Water">
+          <img src="images/electric.png" width = "80px" height = "80px" style = "margin-left: 30px" alt = "Electric">
+          <img src="images/ice.png" width = "80px" height = "80px" style = "margin-left: 30px" alt = "Ice"> <br>
+          <a style = "margin-left: 55px; font-weight: bold; color: #488AC7;">Fly</a>
+          <a style = "margin-left: 85px; font-weight: bold; color: #C45AEC;">Fight</a>
+          <a style = "margin-left: 80px; font-weight: bold; color: #F87217;">Fire</a>
+          <a style = "margin-left: 75px; font-weight: bold; color: #43C6DB;">Water</a>
+          <a style = "margin-left: 65px; font-weight: bold; color: #FDD017;">Electric</a>
+          <a style = "margin-left: 70px; font-weight: bold; color: #55BDCA;">Ice</a> <br> <p> </p>
+      </div>
+  </body>
+</html>

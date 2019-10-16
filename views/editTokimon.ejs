@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset = "utf-8">
+      <title>Tokidex - Edit Tokimon</title>
+      <link rel = "icon" type = "image/x-icon" href = "images/icon.ico">
+      <link href="/stylesheet/tokimon.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <img src="images/Tokidex.png" width = "400px" height = "200px" alt = "Tokidex - The Tokemon Database" class = "centerAlign">
+    <script src="newTokimon.js"></script>
+      <div id = "box">
+          <p> </p>
+          <div class = "options">
+              <a href="/">Home</a>
+              <a href="/addTokimon">Add Tokimon</a>
+              <a href="/deleteTokimon">Delete Tokimon</a>
+              <a href="/Tokidex">View Tokidex</a>
+              <a href="/typeChart">Type Chart</a>
+              <a href="/battle">Battle Simulator</a>
+              <form class = "search" action = "/searchResult" method="POST">
+              <input type="text" placeholder = "Search Tokimon..." style="height: 60%; width: 200px;" name = "searchName" id = "search" onkeyup="submit">
+            </form>
+          </div>
+          <% tokiEdit.forEach((r) => { %>
+          <h1 style = "margin-left: 30px" >Edit Tokimon: <%= r.name %></h1>
+          <form action = "editAndDelete" method = "post">
+             Tokimon Name:  <input type="text" name="name" id="name" value = "<%= r.name %>" required><br><br>
+             Weight (kg):        <input type="number" step = "0.1" name="weight" id = "weight" value = "<%= r.weight %>" required><br><br>
+             Height (cm):        <input type="number" step = "0.1" name="height" id = "height" value = "<%= r.height %>" required><br><br>
+             Fly:
+              <div class="slidecontainer">
+                  <span id = "flyBullet" style= "background: #488AC7;" class = "value"><%= r.fly %></span>
+                  <input type="range" min="0" max="100" value="<%= r.fly %>" class="slider" oninput="viewValues('fly', 'flyBullet')" style = "background: #488AC7;" id="fly" name="fly"> <br><br>
+              </div>
+             Fight:
+              <div class="slidecontainer">
+                  <span id = "fightBullet" class = "value" style= "background: #C45AEC;"><%= r.fight %></span>
+                   <input type="range" min="0" max="100" value="<%= r.fight %>" class="slider" oninput="viewValues('fight', 'fightBullet')" style = "background: #C45AEC;" id="fight" name = "fight"><br><br>
+              </div>
+             Fire:
+              <div class="slidecontainer">
+                  <span id = "fireBullet" class = "value" style= "background: #F87217;"><%= r.fire %></span>
+                  <input type="range" min="0" max="100" value="<%= r.fire %>" class="slider" oninput="viewValues('fire','fireBullet')" style = "background: #F87217;" id="fire" name = "fire"><br><br>
+              </div>
+             Water:
+              <div class="slidecontainer">
+                  <span id = "waterBullet" class = "value" style= "background: #43C6DB ;"><%= r.water %></span>
+                 <input type="range" min="0" max="100" value="<%= r.water %>" class="slider" oninput="viewValues('water', 'waterBullet')" style = "background: #43C6DB;" id="water" name = "water"><br><br>
+              </div>
+             Electric:
+              <div class="slidecontainer">
+                <span id = "electricBullet" class = "value" style= "background:  #FDD017;"><%= r.electric %></span>
+                <input type="range" min="0" max="100" value="<%= r.electric %>" class="slider" oninput="viewValues('electric', 'electricBullet')" style = "background: #FDD017;" id="electric" name = "electric"><br><br>
+              </div>
+             Ice:
+              <div class="slidecontainer">
+                <span id = "iceBullet" class = "value" style= "background:#9AFEFF;"><%= r.ice %></span>
+                <input type="range" min="0" max="100" value="<%= r.ice %>" class="slider" oninput="viewValues('ice', 'iceBullet')" style = "background: #9AFEFF;" id="ice" name = "ice"><br><br>
+              </div>
+             Trainer Name:  <input type="text" name="trainerName" id = "trainerName" value = "<%= r.trainername %>" required>
+             <button type = "submit" style = "margin-left: 0px;" class = "button1">EDIT TOKIMON</button>
+          </form>
+          <% }); %>
+      </div>
+  </body>
+
+
+
+</html>

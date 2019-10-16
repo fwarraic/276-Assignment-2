@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset = "utf-8">
+      <title>Tokidex - Delete Tokimon</title>
+      <link rel = "icon" type = "image/x-icon" href = "images/icon.ico">
+      <link href="/stylesheet/tokimon.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+  <script src="newTokimon.js"></script>
+    <img src="images/Tokidex.png" width = "400px" height = "200px" alt = "Tokidex - The Tokemon Database" class = "centerAlign">
+      <div id = "box">
+          <p> </p>
+          <div class = "options">
+              <a href="/">Home</a>
+              <a href="/addTokimon">Add Tokimon</a>
+              <a class = "Home">Delete Tokimon</a>
+              <a href="/Tokidex">View Tokidex</a>
+              <a href="/typeChart">Type Chart</a>
+              <a href="/battle">Battle Simulator</a>
+              <form class = "search" action = "/searchResult" method="POST">
+              <input type="text" placeholder = "Search Tokimon..." style="height: 60%; width: 200px;" name = "searchName" id = "search" onkeyup="submit">
+            </form>
+          </div>
+          <h1 style = "margin-left: 30px" >Delete a Tokimon from Tokidex</h1>
+          <form action = "deleteTokimon" method = "post">
+             Tokimon Name:  <input type="text" name="name" id="name" required><br><br>
+             <button onclick = "add()" type = "submit" style = "margin-left: 0px; " class = "button1">DELETE TOKIMON</button>
+          </form>
+          <div id="snackbar">Tokimon deleted successfully!</div>
+      </div>
+  </body>
+
+
+
+</html>
